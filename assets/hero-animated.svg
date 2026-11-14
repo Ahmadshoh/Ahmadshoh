@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Ahmadshoh Nasrullozoda</title>
+  <desc id="desc">Senior Full-Stack Engineer building multi-tenant ERP platforms, AI agents and open-source database tooling. Stuttgart, Germany.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowCyan">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1F2937" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect width="1200" height="320" rx="18"/>
+    </clipPath>
+    <style>
+      .fade1 { opacity: 0; animation: fadeUp 1s ease-out .2s forwards; }
+      .fade2 { opacity: 0; animation: fadeUp 1s ease-out .6s forwards; }
+      .fade3 { opacity: 0; animation: fadeUp 1s ease-out 1s forwards; }
+      .fade4 { opacity: 0; animation: fadeUp 1s ease-out 1.4s forwards; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+      .orb1 { animation: drift1 14s ease-in-out infinite alternate; }
+      .orb2 { animation: drift2 18s ease-in-out infinite alternate; }
+      @keyframes drift1 { from { transform: translate(0, 0); } to { transform: translate(80px, 30px); } }
+      @keyframes drift2 { from { transform: translate(0, 0); } to { transform: translate(-90px, -20px); } }
+
+      .node { animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .d1 { animation-delay: .3s; } .d2 { animation-delay: .9s; } .d3 { animation-delay: 1.5s; }
+      .d4 { animation-delay: 2.1s; } .d5 { animation-delay: 2.7s; }
+      @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(1); } 50% { opacity: 1; transform: scale(1.5); } }
+
+      .edge { stroke-dasharray: 6 8; animation: flow 6s linear infinite; }
+      @keyframes flow { to { stroke-dashoffset: -140; } }
+
+      .scan { animation: scan 6s ease-in-out infinite; }
+      @keyframes scan { 0% { transform: translateX(-400px); } 100% { transform: translateX(1200px); } }
+
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      text { font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'Fira Code', 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#grid)" opacity="0.55"/>
+
+    <circle class="orb1" cx="220" cy="80" r="260" fill="url(#glowCyan)"/>
+    <circle class="orb2" cx="1000" cy="260" r="280" fill="url(#glowViolet)"/>
+
+    <!-- agent / data graph on the right -->
+    <g stroke-width="1.5" fill="none">
+      <path class="edge" d="M860 90 L960 150 L1080 100" stroke="#22D3EE" stroke-opacity="0.55"/>
+      <path class="edge" d="M960 150 L920 240 L1060 220" stroke="#A78BFA" stroke-opacity="0.55"/>
+      <path class="edge" d="M1080 100 L1060 220" stroke="#22D3EE" stroke-opacity="0.35"/>
+      <path class="edge" d="M860 90 L920 240" stroke="#A78BFA" stroke-opacity="0.30"/>
+    </g>
+    <g>
+      <circle class="node d1" cx="860" cy="90" r="6" fill="#22D3EE"/>
+      <circle class="node d2" cx="960" cy="150" r="8" fill="#A78BFA"/>
+      <circle class="node d3" cx="1080" cy="100" r="6" fill="#22D3EE"/>
+      <circle class="node d4" cx="920" cy="240" r="6" fill="#F59E0B"/>
+      <circle class="node d5" cx="1060" cy="220" r="7" fill="#22D3EE"/>
+    </g>
+    <g class="mono" font-size="12" fill="#8B949E">
+      <text x="874" y="80">tenant</text>
+      <text x="976" y="146">agent</text>
+      <text x="1094" y="96">LLM</text>
+      <text x="830" y="262">invoice</text>
+      <text x="1074" y="244">stock</text>
+    </g>
+
+    <!-- text block -->
+    <g class="fade1">
+      <text class="mono" x="72" y="92" font-size="16" fill="#22D3EE">~/stuttgart $ whoami<tspan class="cursor" fill="#22D3EE">▍</tspan></text>
+    </g>
+    <g class="fade2">
+      <text x="70" y="160" font-size="58" font-weight="800" fill="url(#name)" letter-spacing="-1">Ahmadshoh Nasrullozoda</text>
+    </g>
+    <g class="fade3">
+      <text x="72" y="204" font-size="24" font-weight="600" fill="#E6EDF3">Senior Full-Stack Engineer
+        <tspan fill="#64748B"> · </tspan><tspan fill="#22D3EE">ERP Platforms</tspan>
+        <tspan fill="#64748B"> · </tspan><tspan fill="#A78BFA">AI Agents</tspan></text>
+    </g>
+    <g class="fade4">
+      <text x="72" y="244" font-size="17" fill="#8B949E">Founder of <tspan fill="#F59E0B" font-weight="700">Tijorat+</tspan> · Creator of <tspan fill="#22D3EE" font-weight="700">Fleetdock</tspan> — software that runs real businesses.</text>
+    </g>
+
+    <!-- scanning highlight line -->
+    <rect class="scan" x="0" y="282" width="400" height="2" fill="url(#line)"/>
+    <rect x="72" y="282" width="1056" height="1" fill="#1F2937"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="18" fill="none" stroke="#30363D"/>
+</svg>
